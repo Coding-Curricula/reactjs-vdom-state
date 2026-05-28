@@ -1,7 +1,38 @@
 import React from 'react'
 
+import SayHello from "./components/SayHello"
+import StudentView from "./components/StudentView"
+
 export default function App() {
+
+  const data = {
+    name: "Chris", 
+    age: 30,
+    city: "New York",
+    hobbies: ["coding", "hiking", "cooking"],
+    enrolled: true,
+    classSchedules: {
+      monday: "Math",
+      tuesday: "Science",
+      wednesday: "History",
+      thursday: "Art",
+      friday: "Physical Education"
+    }
+  }
+
   return (
-    <div>Hello Mom</div>
+    <div>
+      <SayHello name="Mom" />
+            <SayHello name="Dad" />
+
+      <SayHello name="Sister" />
+
+      <SayHello name="Brother" />
+
+      <SayHello name="Timmy" />
+
+      <StudentView data={data} />
+
+    </div>
   )
 }
