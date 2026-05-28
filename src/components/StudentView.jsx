@@ -1,5 +1,7 @@
 import React from 'react'
 
+import ClassSchedules from "./ClassSchedules"
+
 export default function StudentView(props) {
 
     console.log("StudentView props", props  )
@@ -12,11 +14,7 @@ export default function StudentView(props) {
         <p>Hobbies: {props.data.hobbies.join(", ")}</p>
         <p>Enrolled: {props.data.enrolled ? "Yes" : "No"}</p>
         <h3>Class Schedules:</h3>
-        <ul>
-            {Object.entries(props.data.classSchedules).map(([day, subject]) => (
-                <li key={day}>{day}: {subject}</li>
-            ))}
-        </ul>
+        <ClassSchedules schedules={props.data.classSchedules} />
     </div>
   )
 }
