@@ -11,7 +11,7 @@ export default function StudentView(props) {
         <p>Name: {props.data.name}</p>
         <p>Age: {props.data.age}</p>
         <p>City: {props.data.city}</p>
-        <p>Hobbies: {props.data.hobbies.join(", ")}</p>
+        {/* <p>Hobbies: {props.data.hobbies.join(", ")}</p> */}
         <p>Enrolled: {props.data.enrolled ? "Yes" : "No"}</p>
         <h3>Class Schedules:</h3>
         {/* <ClassSchedules schedules={props.data.classSchedules} /> */}
