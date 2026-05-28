@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import SayHello from "./components/SayHello"
 import StudentView from "./components/StudentView"
@@ -6,12 +6,15 @@ import Counter from "./components/Counter"
 
 export default function App() {
 
+  const [city, setCity] = useState("London")
+  const [enrolled, setEnrolled] = useState(false)
+
   const data = {
     name: "Chris", 
     age: 30,
-    city: "New York",
+    city: city,
     hobbies: ["coding", "hiking", "cooking"],
-    enrolled: true,
+    enrolled: enrolled,
     classSchedules: {
       monday: "Math",
       tuesday: "Science",
@@ -35,6 +38,8 @@ export default function App() {
       <SayHello name="Timmy" /> */}
 
       <StudentView data={data} />
+
+      <button onClick={()=>{setEnrolled(true)}}>Enroll</button>
 
     </div>
   )
