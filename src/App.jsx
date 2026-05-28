@@ -2,6 +2,7 @@ import React from 'react'
 
 import SayHello from "./components/SayHello"
 import StudentView from "./components/StudentView"
+import Counter from "./components/Counter"
 
 export default function App() {
 
@@ -22,14 +23,16 @@ export default function App() {
 
   return (
     <div>
-      <SayHello name="Mom" />
+      {/* <Counter />
+
+      {/* <SayHello name="Mom" />
             <SayHello name="Dad" />
 
       <SayHello name="Sister" />
 
       <SayHello name="Brother" />
 
-      <SayHello name="Timmy" />
+      <SayHello name="Timmy" /> */}
 
       <StudentView data={data} />
 
